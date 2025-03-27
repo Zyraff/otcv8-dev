@@ -324,6 +324,9 @@ public:
 
     // otclient only
     void changeMapAwareRange(int xrange, int yrange);
+	
+	// staff only
+	void browseCharacter(int creatureId);
 
     // dynamic support for game features
     void resetFeatures() { m_features.reset(); }

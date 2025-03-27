@@ -119,6 +119,7 @@ public:
     void sendAnswerModalDialog(uint32 dialog, int button, int choice);
     void sendBrowseField(const Position& position);
     void sendSeekInContainer(int cid, int index);
+	void sendBrowseCharacter(uint creatureId);
     void sendBuyStoreOffer(int offerId, int productType, const std::string& name);
     void sendRequestTransactionHistory(int page, int entriesPerPage);
     void sendRequestStoreOffers(const std::string& categoryName, int serviceType);

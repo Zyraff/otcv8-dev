@@ -1445,6 +1445,13 @@ void Game::seekInContainer(int cid, int index)
     m_protocolGame->sendSeekInContainer(cid, index);
 }
 
+void Game::browseCharacter(int creatureId)
+{
+    if (!canPerformGameAction())
+        return;
+    m_protocolGame->sendBrowseCharacter(creatureId);
+}
+
 void Game::buyStoreOffer(int offerId, int productType, const std::string& name)
 {
     if(!canPerformGameAction())

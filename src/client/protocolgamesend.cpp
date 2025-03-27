@@ -1027,6 +1027,14 @@ void ProtocolGame::sendSeekInContainer(int cid, int index)
     send(msg);
 }
 
+void ProtocolGame::sendBrowseCharacter(uint creatureId)
+{
+    OutputMessagePtr msg(new OutputMessage);
+    msg->addU8(Proto::ClientBrowseCharacter);
+    msg->addU32(creatureId);
+    send(msg);
+}
+
 void ProtocolGame::sendBuyStoreOffer(int offerId, int productType, const std::string& name)
 {
     OutputMessagePtr msg(new OutputMessage);
